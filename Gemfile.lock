@@ -3,7 +3,7 @@ PATH
   specs:
     letsencrypt_plugin (0.0.7)
       acme-client (~> 0.3.0)
-      rails (~> 4.2.5)
+      rails (>= 4.2.5)
 
 GEM
   remote: https://rubygems.org/
