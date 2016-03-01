@@ -67,7 +67,7 @@ module LetsencryptPlugin
     def open_priv_key
       private_key_path = privkey_path
       fail "Can not open private key: #{private_key_path}" unless File.exist?(private_key_path) && !File.directory?(private_key_path)
-      OpenSSL::PKey::RSA.new(File.read(private_key_path))
+      OpenSSL::PKey::RSA.new(ENV['CERT_KEYFILE'] || File.read(private_key_path))
     end
 
     def load_private_key
